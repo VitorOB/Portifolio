@@ -18,3 +18,16 @@ projetos.addEventListener('click', () => {
 contato.addEventListener('click', () => {
     scrollToElement(".header", 2)
 })
+
+/* Download do CV */
+document.getElementById('downloadButton').addEventListener('click', function() {
+    // Criando um link temporário
+    var link = document.createElement('a');
+    link.href = './src/CV - Vitor Otávio.pdf';
+    link.download = 'CV - Vitor Otávio.pdf';
+
+    // Simulando um clique no link para iniciar o download
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+});
